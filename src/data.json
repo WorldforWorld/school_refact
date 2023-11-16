@@ -1,0 +1,19 @@
+{
+	"nav": [
+		{"text": "Home",
+		"submenu": [
+				{"link": "#", "text": "item 1"},
+				{"link": "#", "text": "item 2"},
+				{"link": "#", "text": "item 3"},
+				{"link": "#", "text": "item 4"},
+				{"link": "#", "text": "item 5"}
+			]
+		}
+		,
+		{"link": "#About", "text": "About"},
+		{"link": "#Contacts", "text": "Contacts"},
+		{"link": "#Services", "text": "Services"},
+		{"link": "#Feedback", "text": "Feedback"}
+	]
+
+}
