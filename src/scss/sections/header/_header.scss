@@ -1,0 +1,11 @@
+@import "./header-bottom/header-bottom";
+@import "./header-top/header-top";
+.header {
+  background: #f8f6f7;
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+  }
+}

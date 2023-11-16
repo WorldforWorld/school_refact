@@ -1,0 +1,22 @@
+.header-bottom {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+  }
+  &__menu {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+  &__search {
+    margin-top: 10px;
+    margin-right: 31px;
+  }
+  &__logo {
+    margin-top: 22px;
+  }
+  &__basket-content {
+    align-self: flex-start;
+  }
+}
