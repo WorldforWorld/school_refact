@@ -5,7 +5,7 @@
       title: "Школьная форма <br> по <b>самым выгодным</b> <br>ценам",
       buttonHref: "#",
       buttonText: "Подробнее",
-      description: "Комплек школьной формы 'Модерн стиль'",
+      description: "Комплект школьной формы <br>«Модерн-стиль»",
       price: "9000"
     },
     {
@@ -25,7 +25,12 @@
         price: "15000"
     }
   ]
-
+  var socialLinks = [
+    {link: "https://twitter.com/explore", icon: "fab fa-twitter"},
+    {link: "https://web.facebook.com", icon: "fab fa-facebook-f"},
+    {link: "https://vk.com", icon: "fab fa-vk"},
+    {link: "https://www.youtube.com", icon: "fab fa-youtube"},
+  ]
 section.hero
   .container 
     .swiper
@@ -34,13 +39,12 @@ section.hero
           .swiper-slide.hero__slide
             img.hero__image(src=block.imageSrc, alt="hero")
             .hero__info
-              h3.hero__title!= block.title
-              a.hero__button(href=block.buttonHref)
-                = block.buttonText
+              h3.hero__title.dash.dash__top!= block.title
+              a.hero__button.dash.dash__bottom(href=block.buttonHref)= block.buttonText
                 i.fa.fa-angle-right
               .hero__description
-                span.hero__text= block.description
-                span.hero__brand__price
+                span.hero__text.dash.dash__top!= block.description
+                span.hero__brand__price 
                   |  от 
                   span.hero__price__number= block.price
                   |  тг.
@@ -48,3 +52,9 @@ section.hero
         i.fas.fa-angle-left
       .swiper-button-next
         i.fas.fa-angle-right
+    .hero__social__links
+      ul.hero__social__list
+        each item in socialLinks
+          li
+            a(href=item.link)
+              i(class=item.icon)
