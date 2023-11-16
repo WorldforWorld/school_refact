@@ -35,15 +35,10 @@ function watcher() {
   gulp.watch(path.watch.files, copy);
   // gulp.watch(path.watch.copy, gulp.series(copy, ftp))
   gulp.watch(path.watch.html, html);
-  // gulp.watch(path.watch.html, gulp.series(html, ftp))
   gulp.watch(path.watch.scss, scss);
-  // gulp.watch(path.watch.scss, gulp.series(scss, ftp))
   gulp.watch(path.watch.js, js);
-  // gulp.watch(path.watch.js, gulp.series(js, ftp))
   gulp.watch(path.watch.images, images);
-  // gulp.watch(path.watch.images, gulp.series(images, ftp))
   // gulp.watch(path.watch.favicon, favicon);
-  // gulp.watch(path.watch.favicon, gulp.series(favicon, ftp))
 }
 
 export { addLinks, svgSprive };
@@ -52,7 +47,6 @@ export { addLinks, svgSprive };
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
-// const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, favicon));
 const mainTasks = gulp.series(
   fonts,
   gulp.parallel(copy, html, scss, js, images)
