@@ -8,6 +8,8 @@
     font-size: 16px;
     line-height: 30px;
     transition: color ease-in-out 0.1s;
+    word-wrap: normal;
+    white-space: nowrap;
     &:after {
       position: absolute;
       left: 0;
