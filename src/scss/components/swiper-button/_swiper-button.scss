@@ -1,0 +1,27 @@
+.swiper-button-next {
+  right: auto;
+  left: 65px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 45px;
+  height: 45px;
+  color: #cccccc;
+  border: 1px solid #d7d7d7;
+  font-size: 34px;
+  bottom: 127px;
+  top: auto;
+  &::after {
+    display: none;
+  }
+  i {
+    margin-left: 3px;
+    margin-bottom: 3px;
+  }
+}
+.swiper-button-prev:not(.swiper-button-disabled),
+.swiper-button-next:not(.swiper-button-disabled) {
+  border-color: #202020;
+  background-color: #202020;
+  color: #ffffff;
+}

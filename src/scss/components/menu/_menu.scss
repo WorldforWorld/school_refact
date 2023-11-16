@@ -1,0 +1,42 @@
+.menu {
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 18px;
+    color: #202020;
+    font-family: "DINPro-Medium";
+    font-size: 16px;
+    line-height: 30px;
+    transition: color ease-in-out 0.1s;
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 1px;
+      background-color: #f47920;
+      transition: width ease-in-out 0.2s;
+    }
+    &:hover {
+      color: #f47920;
+      i {
+        transform: rotate(180deg);
+      }
+      &:after {
+        width: 100%;
+      }
+    }
+    i {
+      margin-left: 8px;
+      transition: transform ease-in-out 0.1s;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__sublist {
+    display: none;
+  }
+}

@@ -1,0 +1,49 @@
+.hero {
+  background: #f8f6f7;
+  &__slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &__info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    margin-top: auto;
+    color: #202020;
+    font-family: "DINPro-Light";
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.36px;
+    b {
+      font-family: "DINPro-Bold";
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-bottom: auto;
+    padding: 15px 30px;
+    background-color: #202020;
+    color: #ffffff;
+    font-family: "DINPro";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.18px;
+    text-decoration: none;
+  }
+  &__description {
+    display: flex;
+    align-self: flex-end;
+  }
+}

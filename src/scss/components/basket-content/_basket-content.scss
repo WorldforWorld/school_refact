@@ -1,0 +1,50 @@
+.basket-content {
+  display: flex;
+  gap: 10px;
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 61px;
+    height: 83px;
+    color: #f47920;
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    i {
+      margin-top: -3px;
+      font-size: 20px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: flex;
+      bottom: -23px;
+      height: 29px;
+      background-color: #f8f6f7;
+      border-bottom: 1px solid #d7d7d7;
+    }
+    &::before {
+      right: 3px;
+      width: 32px;
+      transform: rotate(200deg);
+    }
+    &::after {
+      left: 4px;
+      width: 30px;
+      transform: rotate(-200deg);
+    }
+    &:last-of-type {
+      color: #ffffff;
+      background-color: #f47920;
+      border-color: #f47920;
+      &::before,
+      &::after {
+        border-color: #f47920;
+      }
+    }
+  }
+}
