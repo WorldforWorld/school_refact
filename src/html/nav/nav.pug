@@ -1,0 +1,45 @@
+-
+  const menuData = [
+    {
+      title: 'Главная',
+      link: '#',
+      submenu: [
+        {
+          title: 'Подстраница 1',
+          link: '#',
+          submenu: [
+            {
+              title: 'Подподстраница 1',
+              link: '#',
+              submenu: [
+                {
+                  title: 'Подподподстраница 1',
+                  link: '#',
+                  submenu: [
+                    // Добавьте здесь нужное количество вложенных подменю
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {title: 'О нас',link: '#'},
+    {title: 'Контакты',link: '#'},
+    {title: 'Услуги',link: '#'},
+    {title: 'Отзывы',link: '#'}
+  ];
+
+mixin generateMenu(menuItems)
+  ul.menu
+    each item in menuItems
+      li.menu-item
+        if item.submenu
+          span.submenu-title= item.title
+          ul.submenu
+            +generateMenu(item.submenu)
+        else
+          a(href=item.link) #{item.title}
+
++generateMenu(menuData)

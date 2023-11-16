@@ -1,0 +1,39 @@
+-
+  var menu = [
+    {link: '#', title: 'Объявления', submenu: {} },
+    {link: '#', title: 'Каталоги', submenu: [
+      {link: '#', title: 'Оптовый католог'},
+      {link: '#', title: 'Розничный каталог'},
+      {link: '#', title: 'Народный базар'},
+  ]
+    },
+    {link: '#', title: 'Участники', submenu: {} },
+    {link: '#', title: 'Партнеры', submenu: {} },
+    {link: '#', title: 'О платформе', submenu: {} },
+    {link: '#', title: 'Новости', submenu: {} },
+  ]
+.header-bottom
+  .container
+    a.logo.header-bottom__logo(href='/')
+      img(src='../assets/images/logo-big.png' alt='logo.png')
+    nav.menu.header-bottom__menu
+      ul.menu__list
+        each item in  menu
+        
+          li.menu__item
+            a.menu__link(href=item.link)= item.title
+              if item.submenu && item.submenu.length
+                i.fas.fa-angle-down
+                ul.menu__sublist
+                  each subItem in item.submenu
+                    li.menu__subitem
+                      a.menu__sublink(href=subItem.link)= subItem.title
+    .search.header-bottom__search.fas.fa-search
+    ul.basket-content.header-bottom__basket-content
+      li.basket-content__item 
+        i.far.fa-heart
+        span.basket-content__count 2
+      li.basket-content__item 
+        i.fas.fa-shopping-bag
+        span.basket-content__count 0
+// /.header-bottom

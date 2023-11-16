@@ -1,0 +1,50 @@
+- 
+  var heroBlocks = [
+    {
+      imageSrc: "assets/images/hero/hero-bg.png",
+      title: "Школьная форма <br> по <b>самым выгодным</b> <br>ценам",
+      buttonHref: "#",
+      buttonText: "Подробнее",
+      description: "Комплек школьной формы 'Модерн стиль'",
+      price: "9000"
+    },
+    {
+      imageSrc: "assets/images/hero/hero-bg.png",
+      title: "Еще один заголовок",
+      buttonHref: "#",
+      buttonText: "Детали",
+      description: "Другое описание",
+      price: "12000"
+    },
+    {
+      imageSrc: "assets/images/hero/hero-bg.png",
+      title: "Третий заголовок",
+      buttonHref: "#",
+      buttonText: "Подробности",
+      description: "Другое описание",
+        price: "15000"
+    }
+  ]
+
+section.hero
+  .container 
+    .swiper
+      .swiper-wrapper
+        each block in heroBlocks
+          .swiper-slide.hero__slide
+            img.hero__image(src=block.imageSrc, alt="hero")
+            .hero__info
+              h3.hero__title!= block.title
+              a.hero__button(href=block.buttonHref)
+                = block.buttonText
+                i.fa.fa-angle-right
+              .hero__description
+                span.hero__text= block.description
+                span.hero__brand__price
+                  |  от 
+                  span.hero__price__number= block.price
+                  |  тг.
+      .swiper-button-prev
+        i.fas.fa-angle-left
+      .swiper-button-next
+        i.fas.fa-angle-right

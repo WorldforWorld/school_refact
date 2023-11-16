@@ -1,0 +1,23 @@
+- 
+  var networks = [
+    { link: '#', title: 'Соц. сети', icon: 'fa fa-comment-dots' },
+    { link: '#', title: 'Торгов. сети', icon: 'fas fa-cart-plus' },
+    { link: '#', title: 'Туристич. сети', icon: 'fas fa-globe' },
+    { link: '#', title: 'Ассоциации', icon: 'fas fa-eye' },
+    { link: '#', title: 'Сервисы', icon: 'fas fa-wrench' },
+    { link: '#', title: '', icon: 'fab fa-android' } // Пример пустого элемента
+  ]
+
+.header-top
+  .container
+    a.header-top__logo(href='/')
+      img(src='assets/images/logo.png' alt='logo.png')
+    ul.header-top__list
+      each network in networks
+        li.header-top__list__item
+          a.header-top__list__item__link(href=network.link)= network.title
+            i(class=network.icon)
+    .login
+      a(href='#') Вход на сайт
+        i.fas(class="fa-lock")
+// /.header-top
