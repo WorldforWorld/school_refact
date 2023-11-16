@@ -1,0 +1,25 @@
+.dash {
+  position: relative;
+  &__bottom {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 50px;
+      left: 0;
+      bottom: -40px;
+      background-color: #cccccc;
+    }
+  }
+  &__top {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 50px;
+      left: 0;
+      top: -30px;
+      background-color: #cccccc;
+    }
+  }
+}
