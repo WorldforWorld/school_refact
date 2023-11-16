@@ -1,9 +1,16 @@
 .hero {
+  padding-top: 27px;
   background: #f8f6f7;
+  .container {
+    display: flex;
+  }
   &__slide {
     position: relative;
     display: flex;
     justify-content: center;
+  }
+  &__image {
+    margin-left: 57px;
   }
   &__info {
     position: absolute;
@@ -16,7 +23,8 @@
     justify-content: center;
   }
   &__title {
-    margin-top: auto;
+    margin-top: 6%;
+    margin-bottom: 27px;
     color: #202020;
     font-family: "DINPro-Light";
     font-size: 36px;
@@ -41,9 +49,57 @@
     line-height: 23px;
     letter-spacing: 0.18px;
     text-decoration: none;
+    i {
+      margin-left: 12px;
+      font-size: 16px;
+    }
   }
   &__description {
     display: flex;
     align-self: flex-end;
+    flex-direction: column;
+    margin-bottom: 48px;
+    margin-right: 17.8%;
+    color: #202020;
+    font-family: "DINPro";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.14px;
+  }
+  &__text.dash {
+    &:before {
+      width: 32px;
+      top: -16px;
+    }
+  }
+  &__brand__price {
+    margin-top: 14px;
+  }
+  &__price__number {
+    color: #f47920;
+    font-size: 24px;
+    letter-spacing: 0.24px;
+  }
+  &__social__links {
+    margin-top: auto;
+    margin-bottom: 46px;
+  }
+  &__social__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    list-style-type: none;
+    a {
+      color: #919191;
+      transition: color ease-in-out 0.1;
+      &:hover {
+        color: #202020;
+      }
+    }
+    i {
+      font-size: 13px;
+    }
   }
 }
